@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header 6</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+                </ul>
+
+                <h2 class="logo">Startup 3</h2>
+
+                <div class="nav-buttons">
+                    <a href="#" class="log-in">Login</a>
+                    <button class="sign-up">Sign Up</button>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h2 class="heading">A high-quality solution for those who want a beautiful startup website quickly</h2>
+
+            <img src="images/Icon - Fill.png" alt="Play" class="icon">
+
+            <p class="content">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!</p>
+        </section>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const navLink = document.querySelectorAll(".nav-link");
+
+        const hero = document.querySelector(".hero");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hero.classList.toggle("hero-opacity");
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+
+        function closeMenu()
+        {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            hero.classList.remove("hero-opacity");
+        }
+    </script>
+    <!-- <img src="images/Image.png" alt="Background" class="background-image">
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+                </ul>
+
+                <h2 class="logo">Startup 3</h2>
+
+                <div class="nav-buttons">
+                    <a href="#" class="log-in">Login</a>
+                    <button class="sign-up">Sign Up</button>
+                </div>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h2 class="heading">A high-quality solution for those who want a beautiful startup website quickly</h2>
+
+            <img src="images/Icon - Fill.png" alt="Play" class="icon">
+
+            <p class="content">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!</p>
+        </section>
+    </div> -->
+</body>
+</html>
